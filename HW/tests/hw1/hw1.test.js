@@ -579,7 +579,7 @@ describe('mainCovertToDigit', function () {
 
 
 
-describe('OOP  ArrayList Push', function () {
+describe('OOP  AlistSecond Push', function () {
     //let newarr = new AlistSecond(1);
     let arrData = [
         {discriber: 'push(23) ', a: 23, expected: "1,23"},
@@ -600,7 +600,7 @@ describe('OOP  ArrayList Push', function () {
 });
 
 
-describe('OOP  ArrayList Pop', function () {
+describe('OOP  AlistSecond Pop', function () {
     let arrData = [
         {discriber: 'pop() ', a: 23, b: 54, c: 234, d: 'test', e: -15, f: 'proba',  expected: 'proba'},
         {discriber: 'pop()', a: 3, b: 4, c: 24, d: 'test12', e: -5, f: '23proba', expected: '23proba'},
@@ -626,7 +626,7 @@ describe('OOP  ArrayList Pop', function () {
 });
 
 
-describe('OOP  ArrayList shift', function () {
+describe('OOP  AlistSecond shift', function () {
     let arrData = [
         {discriber: 'pop() ', a: 23, b: 54, c: 234, d: 'test', e: -15, f: 'proba',  expected: 23},
         {discriber: 'pop()', a: 3, b: 4, c: 24, d: 'test12', e: -5, f: '23proba', expected: 3},
@@ -652,7 +652,7 @@ describe('OOP  ArrayList shift', function () {
 });
 
 
-describe('OOP  ArrayList unshift', function () {
+describe('OOP  AlistSecond unshift', function () {
     let arrData = [
         {discriber: 'unshift() ', a: 23, b: 54, c: 234, d: 'test', e: -15, f: 'proba',  expected: '23,1,54,234,test,-15,proba'},
         {discriber: 'unshift()', a: 3, b: 4, c: 24, d: 'test12', e: -5, f: '23proba', expected: '3,1,4,24,test12,-5,23proba'},
@@ -678,7 +678,7 @@ describe('OOP  ArrayList unshift', function () {
 });
 
 
-describe('OOP  ArrayList remove', function () {
+describe('OOP  AlistSecond remove', function () {
     let arrData = [
         {discriber: 'remove() ', a: 2, b: 54, c: 234, d: 'test', e: -15, f: 'proba',  expected1: '1,54,test,-15,proba', expected: 234},
         {discriber: 'remove()', a: 3, b: 4, c: 24, d: 'test12', e: -5, f: '23proba', expected1: '1,4,24,-5,23proba', expected: 'test12'},
@@ -707,7 +707,7 @@ describe('OOP  ArrayList remove', function () {
 
 
 
-describe('OOP  ArrayList some', function () {
+describe('OOP  AlistSecond some', function () {
     let arrData = [
         {discriber: 'some() ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: true},
         {discriber: 'some()', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: true},
@@ -737,7 +737,7 @@ describe('OOP  ArrayList some', function () {
 });
 
 
-describe('OOP  ArrayList every', function () {
+describe('OOP  AlistSecond every', function () {
     let arrData = [
         {discriber: 'every() ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: false},
         {discriber: 'every()', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: false},
@@ -767,7 +767,7 @@ describe('OOP  ArrayList every', function () {
 });
 
 
-describe('OOP  ArrayList splice', function () {
+describe('OOP  AlistSecond splice', function () {
     let arrData = [
         {discriber: 'splice() ', a: 2, b: 3, c: 234, d: 0, e: -15, f: -15, expected: [234, 0, -15]},
         {discriber: 'splice()', a: 3, b: 1, c: 24, d: 0, e: -5, f: -20, expected: [0]},
@@ -790,7 +790,7 @@ describe('OOP  ArrayList splice', function () {
     });
 });
 
-describe('OOP  ArrayList isArray', function () {
+describe('OOP  AlistSecond isArray', function () {
     let arrData = [
         {discriber: 'isArray() ', a: 2, expected: false},
         {discriber: 'isArray()', a: 'f', expected: false},
@@ -809,7 +809,7 @@ describe('OOP  ArrayList isArray', function () {
     });
 });
 
-describe('OOP  ArrayList isArray2', function () {
+describe('OOP  AlistSecond isArray2', function () {
     let arrData = [
         {discriber: 'isArray() ', a: 2, expected: true}
     ]
@@ -827,7 +827,7 @@ describe('OOP  ArrayList isArray2', function () {
 });
 
 
-describe('OOP  LinkedList Push', function () {
+describe('OOP  LinklistSecond Push', function () {
     let arrData = [
         {discriber: 'push() ', a: 23, b: 'wer', c: true, expected: [23, 'wer', true]},
         {discriber: 'push()', a: 3, b: 'cdr', c: 0, expected: [3, 'cdr', 0]},
@@ -846,7 +846,7 @@ describe('OOP  LinkedList Push', function () {
 });
 
 
-describe('OOP  LinkedList Pop', function () {
+describe('OOP  LinklistSecond Pop', function () {
     let arrData = [
         {discriber: 'pop() ', a: 23, b: 'wer', c: true, expected: [23, 'wer']},
         {discriber: 'pop()', a: 3, b: 'cdr', c: 0, expected: [3, 'cdr']},
@@ -866,7 +866,7 @@ describe('OOP  LinkedList Pop', function () {
 });
 
 
-describe('OOP  LinkedList shift', function () {
+describe('OOP  LinklistSecond shift', function () {
     let arrData = [
         {discriber: 'shift() ', a: 23, b: 'wer', c: true, expected: ['wer', true] },
         {discriber: 'shift()', a: 3, b: 'cdr', c: 0, expected: ['cdr', 0]},
@@ -886,7 +886,7 @@ describe('OOP  LinkedList shift', function () {
 });
 
 
-describe('OOP  LinkedList unshift', function () {
+describe('OOP  LinklistSecond unshift', function () {
     let arrData = [
         {discriber: 'unshift() ', a: 23, b: 'wer', c: true, expected: [true, 23, 'wer', true] },
         {discriber: 'unshift()', a: 3, b: 'cdr', c: 0, expected: [0, 3, 'cdr', 0]},
@@ -906,7 +906,7 @@ describe('OOP  LinkedList unshift', function () {
 });
 
 
-describe('OOP  LinkedList some', function () {
+describe('OOP  LinklistSecond some', function () {
     let arrData = [
         {discriber: 'some() ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: true},
         {discriber: 'some()', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: true},
@@ -937,7 +937,7 @@ describe('OOP  LinkedList some', function () {
 });
 
 
-describe('OOP  LinkedList every', function () {
+describe('OOP  LinkListSecond every', function () {
     let arrData = [
         {discriber: 'every() ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: false},
         {discriber: 'every()', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: false},
@@ -967,11 +967,11 @@ describe('OOP  LinkedList every', function () {
     });
 });
 
-describe('OOP  LinkedList isListSecond', function () {
+describe('OOP  LinklistSecond isListSecond1', function () {
     let arrData = [
-        {discriber: 'isListSecond() ', a: 2, expected: false},
-        {discriber: 'isListSecond()', a: 3,  expected: false},
-        {discriber: 'isListSecond()', a: "-1",  expected: false}
+        {discriber: 'isListSecond1() ', a: 2, expected: false},
+        {discriber: 'isListSecond1()', a: 3,  expected: false},
+        {discriber: 'isListSecond1()', a: "-1",  expected: false}
     ]
 
     arrData.forEach(data => {
@@ -986,7 +986,7 @@ describe('OOP  LinkedList isListSecond', function () {
     });
 });
 
-describe('OOP  LinkedList isListSecond2', function () {
+describe('OOP  LinklistSecond isListSecond2', function () {
     let arrData = [
        {discriber: 'isListSecond2() ', a: 2, expected: true}
     ]
@@ -1005,31 +1005,77 @@ describe('OOP  LinkedList isListSecond2', function () {
         });
     });
 });
-// describe('OOP  LinkedList remove()', function () {
-//         let arrData = [
-//         {discriber: 'remove() ', a: 2, b: 54, c: 234, d: 'test', e: -15, f: 'proba',  expected1: ' ', expected: 234},
-//         {discriber: 'remove()', a: 3, b: 4, c: 24, d: 'test12', e: -5, f: '23proba', expected1: ' ', expected: 'test12'},
-//         {discriber: 'remove()', a: 1, b: 51, c: 224, d: 'test', e: -14, f: 'gold', expected1: ' ', expected: 51}
-//     ]
 
-//          arrData.forEach(data => {
-//             const {discriber, a, b, c, d, e, f, expected1, expected }  = data;
-//             it(`${discriber}`, function () {
-            
-//             let newLink = new LinklistSecond();
-            
-//             newLink.push(a);
-//             newLink.push(b);
-//             newLink.push(c);
-//             newLink.push(e);
-//             newLink.push(f);
-//             newLink.push(d);
-//             console.log(newLink);
-//             const actual = newLink.remove(a);
-//             const actual1 = newLink.toString();
-//            assert.equal(actual, expected);
-//            assert.deepEqual(actual1, expected1);
-//         });
-//     });
-// });
+describe('OOP  LinklistSecond remove1()', function () {
+        let arrData = [
+        {discriber: 'remove() ', a: 2, b: 54, c: 234, d: 'test', e: -15, f: 'proba',  expected1: ' ', expected: 234},
+        {discriber: 'remove()', a: 0, b: 4, c: 24, d: 'test12', e: -5, f: '23proba', expected1: ' ', expected: 0},
+        {discriber: 'remove()', a: 3, b: 51, c: 224, d: 'test', e: -14, f: 'gold', expected1: ' ', expected: 'test'}
+    ]
 
+         arrData.forEach(data => {
+            const {discriber, a, b, c, d, e, f, expected1, expected }  = data;
+            it(`${discriber}`, function () {
+            
+            let newLink = new LinklistSecond();
+            
+            newLink.push(a);
+            newLink.push(b);
+            newLink.push(c);
+            newLink.push(d);
+            newLink.push(e);
+            newLink.push(f);
+            const actual = newLink.remove(a);
+           assert.equal(actual, expected);
+        });
+    });
+});
+
+describe('OOP  LinklistSecond remove2()', function () {
+    let arrData = [
+    {discriber: 'remove2() ', a: 2, b: 54, c: 234, d: 'test', e: -15, f: 'proba',  expected1: ' ', expected: '2 54 test -15 proba'},
+    {discriber: 'remove2()', a: 0, b: 4, c: 24, d: 'test12', e: -5, f: '23proba', expected1: ' ', expected: '4 24 test12 -5 23proba'},
+    {discriber: 'remove2()', a: 3, b: 51, c: 224, d: 'test', e: -14, f: 'gold', expected1: ' ', expected: '3 51 224 -14 gold'}
+]
+     arrData.forEach(data => {
+        const {discriber, a, b, c, d, e, f, expected1, expected }  = data;
+        it(`${discriber}`, function () {
+        let newLink = new LinklistSecond();
+
+        newLink.push(a);
+        newLink.push(b);
+        newLink.push(c);
+        newLink.push(d);
+        newLink.push(e);
+        newLink.push(f);
+        newLink.remove(a);
+        const actual = newLink.toString();
+       assert.equal(actual, expected);
+    });
+});
+});
+
+describe('OOP  LinkListSecond toString', function () {
+    let arrData = [
+        {discriber: 'toString() "2 54 234 -15 -15 0 " ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: '2 54 234 -15 -15 0'},
+        {discriber: 'toString()"3 4 24 -5 -20 0 "', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: '3 4 24 -5 -20 0'},
+        {discriber: 'toString()"-1 -51 -224 -14 -14 -9 "', a: -1, b: -51, c: -224, d: -9, e: -14, f: -14, expected: '-1 -51 -224 -14 -14 -9'}
+    ]
+
+    arrData.forEach(data => {
+        const {discriber, a, b, c, d, e, f, expected }  = data;
+        it(`${discriber}`, function () {
+            let newLink = new LinklistSecond();
+            
+            newLink.push(a);
+            newLink.push(b);
+            newLink.push(c);
+            newLink.push(e);
+            newLink.push(f);
+            newLink.push(d);
+
+            const actual = newLink.toString(newLink);
+            assert.equal(actual, expected);
+        });
+    });
+});

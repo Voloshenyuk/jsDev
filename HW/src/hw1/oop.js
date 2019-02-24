@@ -529,7 +529,15 @@ AlistSecond.prototype.isArray = function(item){
     
 
 AlistSecond.prototype.toString = function(){
-                return this.arr.join();
+                let outputString = '';
+                for ( let i=0 ; i < this.length  ; i++ ){
+                    if ( i === this.length - 1) {
+                        outputString = outputString + this.arr[i];
+                    }   else {
+                            outputString = outputString + this.arr[i] + ',';
+                        }
+                }
+        return outputString;
 }
 
 AlistSecond.prototype.sort = function(callback) {
@@ -719,22 +727,20 @@ LinklistSecond.prototype.isLinkListSecond = function(item){
 }
 
 LinklistSecond.prototype.remove = function(index){
-    var i = 1;
-    let current = this.root;
-    let prevDel = null;
-
-    while( i < index - 1 ){
-        current = current.next;
-        i++;
-    }
-    prevDel = current;
-
-    current = current.next;
-    prevDel.next = current.next;
-    current = current.next;
-    current.prev = prevDel;
+    // var i = 0;
+    let forReturn;
+    if (index === 0) {
+        forReturn = this.root.value;
+        this.root = this.root.next;
+    }   else {
+            let current = this.root;
+            for ( let i = 0 ; i < index - 1 ; i ++ , current = current.next ){
+            }
+            forReturn = current.next.value;
+            current.next = current.next.next;
+        }    
     this.length--;
-
+    return forReturn;
 }
 
 
@@ -743,7 +749,14 @@ LinklistSecond.prototype.toString = function() {
         let outputString = '';
 
         while (current !== null) {
-            outputString = outputString + current.value;
+            if (current.next === null){
+                outputString = outputString + current.value;
+                current = current.next;                    
+            }  else {
+                outputString = outputString + current.value + ' ';
+                current = current.next;
+            }
+            
         }
 
     return outputString;
@@ -769,57 +782,36 @@ LinklistSecond.prototype.toLinkedList = function (){
 
 }
 
-LinklistSecond.prototype.sort = function (callback){
-        let current = this.root;
-        let currentJ = this.root;
-        let linkLenth = 0;
-
-        while (current != null) {
-            linkLenth++;
-            current = current.next;
-
-        }
+LinklistSecond.prototype.sort = function (){
         var n = this.length;
-        current = this.root;
-
-                for (var i = 0; i < n-1;  i++)
-                     for (var j = 0; ((j < n-1-i) && 1 /*current.next*/) ; j++, current = current.next )
-                            console.log(j + '   ' + current.value);
+                for (var i = 0; i < n-1;  i++){
+                    current = this.root;
+                    for (var j = 0; (j < n-1-i) ; j++, current = current.next ){
                             if (current.next.value < current.value) { 
                                     var t = current.next.value;
                                     current.next.value = current.value; 
                                     current.value = t; 
-                            }
-                                    
-       // return this.toString();   
-
-    //     function BubbleSort(arr)       
-    //     {                            
-    // var n = A.length;
-    // for (var i=0;i<n-1;i++)
-    //  { for (var j=0;j<n-1-i;j++)
-    //     {if (arr[j+1]<arr[j])
-    //        {var t=arr[j+1];arr[j+1] =arr[j];arr[j]=t; }
-    //     }
-    //  }                     
-    // return arr;    
+                            }   
+                        continue;
+                    }  
+                } 
+         return this.toArrayList();   
 }
 
 LinklistSecond.prototype.splice = function(){
-    
+
 }
 
-
-           
-// let newLink = new LinklistSecond();
-// newLink.push(23);
-// newLink.push(55);
-// newLink.push(7);
-// newLink.push(0);
-// newLink.push(41);
-// newLink.push(-5);
-// newLink.push(-45);
-// newLink.push(12);
+let newLink = new LinklistSecond();
+newLink.push(23);
+newLink.push(55);
+newLink.push(7);
+newLink.push(0);
+newLink.push(41);
+newLink.push(-5);
+newLink.push(-45);
+newLink.push(12);
  
-// newLink.sort();
-
+// console.log(newLink.sort());
+// console.log(newLink.toString());
+console.log(newLink.remove(2));
