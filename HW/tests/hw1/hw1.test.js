@@ -790,6 +790,43 @@ describe('OOP  ArrayList splice', function () {
     });
 });
 
+describe('OOP  ArrayList isArray', function () {
+    let arrData = [
+        {discriber: 'isArray() ', a: 2, expected: false},
+        {discriber: 'isArray()', a: 'f', expected: false},
+        {discriber: 'isArray()', a: 1, expected: false}
+    ]
+
+    arrData.forEach(data => {
+        const {discriber, a, expected }  = data;
+        it(`${discriber}`, function () {
+            let newarr = new AlistSecond(-1);
+
+            newarr.push(a);
+            const actual = newarr.isArray(a);
+            assert.equal(expected, actual );
+        });
+    });
+});
+
+describe('OOP  ArrayList isArray2', function () {
+    let arrData = [
+        {discriber: 'isArray() ', a: 2, expected: true}
+    ]
+
+    arrData.forEach(data => {
+        const {discriber, a, expected }  = data;
+        it(`${discriber}`, function () {
+            let newarr = new AlistSecond(-1);
+            let newarr1 = new AlistSecond(-1);
+
+            const actual = newarr.isArray(newarr1);
+            assert.equal(expected, actual );
+        });
+    });
+});
+
+
 describe('OOP  LinkedList Push', function () {
     let arrData = [
         {discriber: 'push() ', a: 23, b: 'wer', c: true, expected: [23, 'wer', true]},
@@ -930,7 +967,44 @@ describe('OOP  LinkedList every', function () {
     });
 });
 
+describe('OOP  LinkedList isListSecond', function () {
+    let arrData = [
+        {discriber: 'isListSecond() ', a: 2, expected: false},
+        {discriber: 'isListSecond()', a: 3,  expected: false},
+        {discriber: 'isListSecond()', a: "-1",  expected: false}
+    ]
 
+    arrData.forEach(data => {
+        const {discriber, a, expected }  = data;
+        it(`${discriber}`, function () {
+            let newLink = new LinklistSecond();
+                        
+            newLink.push(a);
+            const actual = newLink.isLinkListSecond(a);
+            assert.equal(actual, expected);
+        });
+    });
+});
+
+describe('OOP  LinkedList isListSecond2', function () {
+    let arrData = [
+       {discriber: 'isListSecond2() ', a: 2, expected: true}
+    ]
+
+    arrData.forEach(data => {
+        const {discriber, a, expected }  = data;
+        it(`${discriber}`, function () {
+            let newLink = new LinklistSecond();
+            let tempLink = new LinklistSecond();
+                        
+            newLink.push(a);
+            tempLink.push(a);
+
+            const actual = newLink.isLinkListSecond(tempLink);
+            assert.equal(actual, expected);
+        });
+    });
+});
 // describe('OOP  LinkedList remove()', function () {
 //         let arrData = [
 //         {discriber: 'remove() ', a: 2, b: 54, c: 234, d: 'test', e: -15, f: 'proba',  expected1: ' ', expected: 234},

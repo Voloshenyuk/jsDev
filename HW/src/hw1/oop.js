@@ -132,7 +132,6 @@ Alist.prototype.splice = function(index, forDel) {
         }
 
         for(let y = i = index ; i < index + forDel ; ++i  ){
-        
             this.remove(y);
         }
     
@@ -141,43 +140,33 @@ Alist.prototype.splice = function(index, forDel) {
             let lastPart = [];
 
             for(  let i = 0 ; i < index ; i++  ){
-
                 firstPart.push(this.arr[i]);
-
             }
         
             for ( let i = index ; i < this.length ; i++ ){
-
                 lastPart.push(this.arr[i]);
-
             }
         
         
         
             for (let i = 2 ; i < arguments.length; ++i ){
-
                 firstPart.push(arguments[i]); 
-
             }    
 
             for( let i = 0 ; i < lastPart.length ; ++i  ){
-
                 firstPart.push(lastPart[i]);
-
             }
 
             for (let i = 0 ; i < firstPart.length  ; ++i ){
-
                 this.arr[i] = firstPart[i] ;
             }
         }
 }
 
-Alist.prototype.isArray = function(){
-
-                                return true;
-
-                          }
+Alist.prototype.isArray = function(value){
+                    // console.log(value instanceof String);        
+                    return (value instanceof Alist);        
+             }
     
 
 
@@ -190,7 +179,9 @@ Alist.prototype.isArray = function(){
 
 
 
-// let newarr = new Alist(15);
+// let newarr1 = new Alist(15);
+// let newarr2 = new Alist(15);
+// console.log (newarr1.isArray(newarr2));
 // newarr.push(111111);
 // newarr.push(222222);
 // newarr.push(333333);
@@ -344,9 +335,9 @@ Linklist.prototype.every = function(callback){
     return tempFlag;   
 }
 
-Linklist.prototype.isLinkedList = function(){
+Linklist.prototype.isLinkedList = function(item){
         
-    return true;
+     return( item instanceof Linklist) ;
 
 }
 
@@ -529,21 +520,16 @@ AlistSecond.prototype.splice = function(index, forDel) {
                 this.arr[i] = firstPart[i] ;
             }
         }
-
     return tempArr;
 }
 
-AlistSecond.prototype.isArray = function(){
-    
-                               return true;
-
+AlistSecond.prototype.isArray = function(item){
+                               return( item instanceof AlistSecond) ;
                           }
     
 
 AlistSecond.prototype.toString = function(){
-    
                 return this.arr.join();
-
 }
 
 AlistSecond.prototype.sort = function(callback) {
@@ -728,10 +714,8 @@ LinklistSecond.prototype.every = function(callback){
     return tempFlag;   
 }
 
-LinklistSecond.prototype.isLinkedList = function(){
-        
-    return true;
-
+LinklistSecond.prototype.isLinkListSecond = function(item){
+           return( item instanceof LinklistSecond) ;
 }
 
 LinklistSecond.prototype.remove = function(index){
@@ -826,6 +810,7 @@ LinklistSecond.prototype.splice = function(){
 }
 
 
+           
 // let newLink = new LinklistSecond();
 // newLink.push(23);
 // newLink.push(55);
