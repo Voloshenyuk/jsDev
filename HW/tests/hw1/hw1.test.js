@@ -1079,3 +1079,129 @@ describe('OOP  LinkListSecond toString', function () {
         });
     });
 });
+
+describe('Binary Tree  add', function () {
+    let arrData = [
+        {discriber: 'add() "2 54 234 -15 -15 0 " ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: '-15 -15 0 2 54 234 '},
+        {discriber: 'add()"3 4 24 -5 -20 0 "', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: '-20 -5 0 3 4 24 '},
+        {discriber: 'add()"-1 -51 -224 -14 -14 -9 "', a: -1, b: -51, c: -224, d: -9, e: -14, f: -14, expected: '-224 -51 -14 -14 -9 -1 '}
+    ]
+
+    arrData.forEach(data => {
+        const {discriber, a, b, c, d, e, f, expected }  = data;
+        it(`${discriber}`, function () {
+            let newTree = new BinTree();
+            newTree.add(a);
+            newTree.add(b);
+            newTree.add(c);
+            newTree.add(e);
+            newTree.add(f);
+            newTree.add(d);
+
+            const actual = newTree.toString(newTree.root);
+            assert.equal(actual, expected);
+        });
+    });
+});
+
+
+describe('Binary Tree  find', function () {
+    let arrData = [
+        {discriber: 'find() "2 54 234 -15 -15 0 " ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: 'do not find'},
+        {discriber: 'find()"3 4 24 -5 -20 0 "', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: -5},
+        {discriber: 'find()"-1 -51 -224 -14 -14 -9 "', a: -1, b: -51, c: -224, d: -9, e: -14, f: -14, expected: 'do not find'}
+    ]
+
+    arrData.forEach(data => {
+        const {discriber, a, b, c, d, e, f, expected }  = data;
+        it(`${discriber}`, function () {
+            let newTree = new BinTree();
+            newTree.add(a);
+            newTree.add(b);
+            newTree.add(c);
+            newTree.add(e);
+            newTree.add(f);
+            newTree.add(d);
+
+            const actual = newTree.find( - 5, newTree.root);
+            assert.equal(actual, expected);
+        });
+    });
+});
+
+
+describe('Binary Tree  toString', function () {
+    let arrData = [
+        {discriber: 'toString() "2 54 234 -15 -15 0 " ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: '-15 -15 0 2 54 234 '},
+        {discriber: 'toString()"3 4 24 -5 -20 0 "', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: '-20 -5 0 3 4 24 '},
+        {discriber: 'toString()"-1 -51 -224 -14 -14 -9 "', a: -1, b: -51, c: -224, d: -9, e: -14, f: -14, expected: '-224 -51 -14 -14 -9 -1 '}
+    ]
+
+    arrData.forEach(data => {
+        const {discriber, a, b, c, d, e, f, expected }  = data;
+        it(`${discriber}`, function () {
+            let newTree = new BinTree();
+            newTree.add(a);
+            newTree.add(b);
+            newTree.add(c);
+            newTree.add(e);
+            newTree.add(f);
+            newTree.add(d);
+
+            const actual = newTree.toString(newTree.root);
+            assert.equal(actual, expected);
+        });
+    });
+});
+
+
+describe('Binary Tree  toArray', function () {
+    let arrData = [
+        {discriber: 'toArray() "2 54 234 -15 -15 0 " ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: [ -15, -15, 0, 2, 54, 234 ]},
+        {discriber: 'toArray()"3 4 24 -5 -20 0 "', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: [ -20, -5, 0, 3, 4, 24 ]},
+        {discriber: 'toArray()"-1 -51 -224 -14 -14 -9 "', a: -1, b: -51, c: -224, d: -9, e: -14, f: -14, expected: [ -224, -51, -14, -14, -9, -1 ]}
+    ]
+
+    arrData.forEach(data => {
+        const {discriber, a, b, c, d, e, f, expected }  = data;
+        it(`${discriber}`, function () {
+            let newTree = new BinTree();
+            newTree.add(a);
+            newTree.add(b);
+            newTree.add(c);
+            newTree.add(e);
+            newTree.add(f);
+            newTree.add(d);
+
+            const actual = newTree.toArray(newTree.root);
+            assert.deepEqual(actual, expected);
+        });
+    });
+});
+
+
+describe('Binary Tree  remove', function () {
+    let arrData = [
+        {discriber: 'remove() "2 54 234 -15 -15 0 " ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: [ -15, -15, 0, 2, 54, 234 ]},
+        {discriber: 'remove()"3 4 24 -5 -20 0 "', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: [ -20, -5, 0, 3, 4, 24 ]},
+        {discriber: 'remove()"-1 -51 -224 -14 -14 -9 "', a: -1, b: -51, c: -224, d: -9, e: -14, f: -14, expected: [ -224, -51, -14, -14, -9, -1 ]}
+    ]
+
+    arrData.forEach(data => {
+        const {discriber, a, b, c, d, e, f, expected }  = data;
+        it(`${discriber}`, function () {
+            let newTree = new BinTree();
+            newTree.add(a);
+            newTree.add(b);
+            newTree.add(c);
+            newTree.add(e);
+            newTree.add(f);
+            newTree.add(d);
+            newTree.remove(e ,newTree.root);
+            const actual = newTree.toString(newTree.root);
+            assert.equal(actual, expected);
+        });
+    });
+});
+
+

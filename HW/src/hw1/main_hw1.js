@@ -618,7 +618,11 @@ function transformNumberToWord(longNumber) {
 
     }
 
-    var miliard = [arrFromStringLongNumber[0], arrFromStringLongNumber[1], arrFromStringLongNumber[2]];
+    var miliard = [
+                    arrFromStringLongNumber[0],
+                    arrFromStringLongNumber[1],
+                    arrFromStringLongNumber[2]
+                  ];
         miliard = +miliard.join('');
     var rightMiliard = "  миллиардов";
     var fromWord3Digit = convertTowords3Digit(miliard);
@@ -647,7 +651,12 @@ function transformNumberToWord(longNumber) {
     }
 
     fullString = fullString +  fromWord3Digit + rightMiliard;
-    var milion = [arrFromStringLongNumber[3], arrFromStringLongNumber[4], arrFromStringLongNumber[5]];
+    var milion = [
+                    arrFromStringLongNumber[3],
+                    arrFromStringLongNumber[4],
+                    arrFromStringLongNumber[5]
+                 ];
+
     milion = +milion.join('');
     var rightMilion = " миллионов";
     fromWord3Digit = convertTowords3Digit(milion);
@@ -676,7 +685,11 @@ function transformNumberToWord(longNumber) {
     }
 
     fullString = fullString +' '+ fromWord3Digit + rightMilion;
-    var thousands = [arrFromStringLongNumber[6], arrFromStringLongNumber[7], arrFromStringLongNumber[8]];
+    var thousands = [
+                        arrFromStringLongNumber[6],
+                        arrFromStringLongNumber[7],
+                        arrFromStringLongNumber[8]
+                    ];
     thousands = +thousands.join('');
     var rightThousands = "  тысяч";
     fromWord3Digit = convertTowords3Digit(thousands);
@@ -706,7 +719,12 @@ function transformNumberToWord(longNumber) {
 
     fullString = fullString +''+ fromWord3Digit + rightThousands;
 
-    var decad = [arrFromStringLongNumber[9], arrFromStringLongNumber[10], arrFromStringLongNumber[11]];
+    var decad = [
+                    arrFromStringLongNumber[9],
+                    arrFromStringLongNumber[10],
+                    arrFromStringLongNumber[11]
+                ];
+
     decad = +decad.join('');
     fromWord3Digit = convertTowords3Digit(decad);
     fullString = fullString +' '+ fromWord3Digit;
@@ -882,9 +900,7 @@ function LList0() {
             this.length--;
 
         } else {
-            
             console.log('удаление из пустого списка');
-
         }
         
     } 
@@ -915,9 +931,7 @@ function LList0() {
 
             this.last.prev.next = null;
             this.length--;
-
         }  else {
-            
                 console.log('удаление из пустого списка');
                 return;
            }
@@ -931,17 +945,11 @@ function LList0() {
         let current = this.root;
         
         while (current != null) {
-
             if (colback(current.value) ) {
-                
                 return  true;
-
-            }   else {
-
+            }  else {
                    current = current.next;
-
-                }   
-
+               }   
         }
 
         return false;   
@@ -961,16 +969,13 @@ function LList0() {
                 }
                 current = current.next;
             }
-
             return tempFlag;   
     }
 
 
 
     this.isLinkedList = function(){
-        
         return true;
-
     }
 
     this.remove = function(index){
@@ -983,17 +988,12 @@ function LList0() {
             i++;
         }
         prevDel = current;
-
         current = current.next;
         prevDel.next = current.next;
         current = current.next;
         current.prev = prevDel;
         this.length--;
-
     }
-
-
-
 }
 
 //функция копирования объекта
@@ -1018,7 +1018,6 @@ function Alist(arr){
         
 
         this.push = function(item){
-
             this.arr[this.length]=item;
             ++this.length;
         }
@@ -1031,14 +1030,11 @@ function Alist(arr){
         }
 
         this.shift = function(){
-            
             var tempArr = [];
 
                 for (var i = 0; i < this.length ; i++){
-
                     var tempArr = this.arr[ 0 ];
                     this.arr[ i ] = this.arr[ i + 1 ];
-                    
                 }
                       
             this.length--; 
@@ -1048,9 +1044,7 @@ function Alist(arr){
 
         this.unshift = function(item){
             for (var i = 0; i < this.length ; i++){
-
                 this.arr[ this.length - i ] = this.arr[this.length - 1 - i];
-
             }
             
             this.arr[0] = item;
@@ -1060,18 +1054,21 @@ function Alist(arr){
         this.remove = function(index){
             let removedValue = this.arr[index];
             let tempArr =[];    
+
             for ( let i = index + 1 ; i <  this.length; ++ i ){
                  tempArr.push( this.arr[ i ] ) ;
-                
             }
+            
             this.length = index;
             this.arr.length = this.length;
+
             for ( let i = 0 ; i < tempArr.length ; ++ i ){
                 this.arr.push(tempArr[i]);
                 ++this.length;
             }
             this.length = this.arr.length;
-            return removedValue;
+
+          return removedValue;
         }
 
         this.some = function (colback){
@@ -1083,7 +1080,6 @@ function Alist(arr){
         }
 
         this.every = function (colback){
-           
             let tempFlag = true;
 
             for ( let i = 0; i < this.length; ++i  ){
@@ -1097,17 +1093,13 @@ function Alist(arr){
         }
 
         this.splice =  function(index, forDel) {
-
                 if (!forDel) forDel = this.length - index;
                     let removeArr = [];
                     for(let i = index ; i < index + forDel ; ++i  ){
-
                         removeArr.push(this.arr[i]);
-
                     }
 
                     for(let y = i = index ; i < index + forDel ; ++i  ){
-                    
                         this.remove(y);
                     }
                 
@@ -1116,45 +1108,28 @@ function Alist(arr){
                         let lastPart = [];
 
                         for(  let i = 0 ; i < index ; i++  ){
-
                             firstPart.push(this.arr[i]);
-
                         }
                     
                         for ( let i = index ; i < this.length ; i++ ){
-
                             lastPart.push(this.arr[i]);
-
                         }
                     
-                    
-                    
                         for (let i = 2 ; i < arguments.length; ++i ){
-
                             firstPart.push(arguments[i]); 
-
                         }    
 
                         for( let i = 0 ; i < lastPart.length ; ++i  ){
-
                             firstPart.push(lastPart[i]);
-                            
-
                         }
 
                         for (let i = 0 ; i < firstPart.length  ; ++i ){
-
                             this.arr[i] = firstPart[i] ;
-
                         }
                     }
-                
         }
-
         this.isArray = function(){
-
             return true;
-
         }
 }
 

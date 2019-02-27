@@ -1,0 +1,88 @@
+.main {
+    background-color: #c7c7c7fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+    padding: 15px;
+}
+
+
+.wraper {
+    width: 350px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+
+}
+
+.registr{
+    padding-top: 20px;
+    margin: auto;
+    font-family: raleway,sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.inner{
+    margin: auto;  
+    font-size: 25px;
+    align-items :center;
+    height: 35px;
+}
+ 
+.but{
+
+    height:35px;
+    width:300px;
+    background-color: #5d9de7;
+    color:white; 
+    font-size: 17px;
+}
+
+.btn{
+    width: 40px;
+    margin: 5px;
+}
+
+.form-control{
+    width: 310px;
+    margin: 5px;
+}
+
+.content{
+    background-color: rgb(230, 181, 245);
+    width: 350px;
+}
+
+.main_calc {
+    background-color: #c7c7c7fd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    padding: 15px;
+}
+
+
+.wraper_calc {
+    width: 350px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    /* height: 140px; */
+
+}
+
+.header{
+    width: 100%;
+    background-color: rgb(31, 141, 31);
+    height: 70px;
+}
+
+.footer{
+    width: 100%;
+    background-color: rgb(35, 166, 199);
+    height: 150px;
+}
