@@ -1,0 +1,11 @@
+details p {
+    margin-left: 70px;
+}
+
+/* details summary {
+    margin-left: 70px;
+} */
+
+details details {
+    margin-left: 70px; 
+}
