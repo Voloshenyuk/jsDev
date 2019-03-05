@@ -1182,9 +1182,9 @@ describe('Binary Tree  toArray', function () {
 
 describe('Binary Tree  remove', function () {
     let arrData = [
-        {discriber: 'remove() "2 54 234 -15 -15 0 " ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: [ -15, -15, 0, 2, 54, 234 ]},
-        {discriber: 'remove()"3 4 24 -5 -20 0 "', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: [ -20, -5, 0, 3, 4, 24 ]},
-        {discriber: 'remove()"-1 -51 -224 -14 -14 -9 "', a: -1, b: -51, c: -224, d: -9, e: -14, f: -14, expected: [ -224, -51, -14, -14, -9, -1 ]}
+        {discriber: 'remove() "2 54 234 -15 -15 0 " ', a: 2, b: 54, c: 234, d: 0, e: -15, f: -15, expected: '-15 -15 0 2 54 '},
+        {discriber: 'remove()"3 4 24 -5 -20 0 "', a: 3, b: 4, c: 24, d: 0, e: -5, f: -20, expected: '-20 -5 0 3 4 '},
+        {discriber: 'remove()"-1 -51 -224 -14 -14 -9 "', a: -1, b: -51, c: -224, d: -9, e: -14, f: -14, expected: '-51 -14 -14 -9 -1 '}
     ]
 
     arrData.forEach(data => {
@@ -1197,7 +1197,7 @@ describe('Binary Tree  remove', function () {
             newTree.add(e);
             newTree.add(f);
             newTree.add(d);
-            newTree.remove(e ,newTree.root);
+            newTree.remove(c ,newTree.root);
             const actual = newTree.toString(newTree.root);
             assert.equal(actual, expected);
         });
